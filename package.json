@@ -18,7 +18,7 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e:mongodb": "export DBMS=mongodb; docker-compose --env-file ./.env -f ./docker/docker-compose-mongodb.yml up -d; jest --config ./test/jest-e2e.json",
-    "test:e2e:postgres": "jest --config ./test/jest-e2e.json",
+    "test:e2e:postgres": "export DBMS=postgres; docker-compose --env-file ./.env -f ./docker/docker-compose-postgres.yml up -d; jest --config ./test/jest-e2e.json",
     "test:e2e:postgres:user": "export DBMS=postgres; docker-compose --env-file ./.env -f ./docker/docker-compose-postgres.yml up -d; jest --config ./test/jest-e2e.json --testPathPattern=user.e2e-spec.ts",
     "test:e2e:postgres:task": "export DBMS=postgres; docker-compose --env-file ./.env -f ./docker/docker-compose-postgres.yml up -d; jest --config ./test/jest-e2e.json --testPathPattern=task.e2e-spec.ts",
     "start:mongodb": "export DBMS=mongodb; docker-compose --env-file ./.env -f ./docker/docker-compose-mongodb.yml up -d; npm run start:dev",
