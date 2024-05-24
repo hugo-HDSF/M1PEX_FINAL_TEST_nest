@@ -5,6 +5,8 @@
   "testTimeout": 150000,
   "testRegex": ".e2e-spec.ts$",
   "verbose": true,
+  "maxConcurrency": 1,
+  "maxWorkers": 1,
   "transform": {
     "^.+\\.(t|j)s$": "ts-jest"
   }
