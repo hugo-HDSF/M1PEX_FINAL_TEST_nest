@@ -1,5 +1,5 @@
 import { AppModule } from '../src/app.module';
-import { INestApplication } from '@nestjs/common';
+import { INestApplication, ValidationPipe } from '@nestjs/common';
 import { Test } from '@nestjs/testing';
 import { UserService } from '../src/user/user.service';
 import * as request from 'supertest';
@@ -11,6 +11,7 @@ describe('UserController', () => {
     describe('POST /', () => {
         beforeEach(async () => {
             app = await createNestApplication();
+            app.useGlobalPipes(new ValidationPipe({ transform: true }));
             userService = app.get(UserService);
 
             await app.init();

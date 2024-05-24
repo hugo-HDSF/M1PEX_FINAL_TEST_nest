@@ -1,18 +1,28 @@
-import { Injectable, NotImplementedException } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
+import { UserRepository } from './user.repository';
+import User from './user.entity';
 
 @Injectable()
 export class UserService {
-    constructor() {}
+    constructor(private usersRepository: UserRepository) {}
 
-    addUser(email: string): Promise<void> {
-        throw new NotImplementedException();
+    async addUser(email: string): Promise<User> {
+        return await this.usersRepository.addUser(email);
     }
 
-    getUser(email: string): Promise<unknown> {
-        throw new NotImplementedException();
+    async getUser(email: string): Promise<User> {
+        return await this.usersRepository.getUser(email);
     }
 
-    resetData(): Promise<void> {
-        throw new NotImplementedException();
+    async getUserById(userId: number): Promise<User> {
+        return await this.usersRepository.getUserById(userId);
+    }
+
+    async getUsers(): Promise<User[]> {
+        return await this.usersRepository.getUsers();
+    }
+
+    async resetData(): Promise<void> {
+        return this.usersRepository.resetData();
     }
 }
