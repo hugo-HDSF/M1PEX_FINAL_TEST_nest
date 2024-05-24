@@ -52,10 +52,14 @@ npm ci
 ```
 
 ### 🧪 Tests
+1. Run the following command to run the unit tests:
 ```Shell
 npm run test:e2e:postgres
 ```
 
 ### 🗺️ Swagger 
-
-> The Swagger is available at the following address: [http://localhost:3000/api](http://localhost:3000/api)
+1. Run the following command to start the server:
+```Shell
+npm run start:dev
+```
+> The Swagger will be available at the following address: [http://localhost:3000/api](http://localhost:3000/api)
