@@ -14,7 +14,7 @@
 
 <p align="center">
   <p align="center">
-      Weather App Clone <a href="www.apple.com">Apple</a> is a clone of the Apple weather application.
+      Backend ToDoList made with <a href="https://nestjs.com/">NestJs</a>.
 </p> 
     <p align="center">.
         <a href="https://github.com/hugo-HDSF/M1PEX_FINAL_TEST_nest/issues">Report Bug</a>
@@ -41,12 +41,12 @@
 ## Setup
 
 ### 🏗️ Initialisation
-1. Clonez le dépôt GitHub:
+1. Clone repository:
 ```Shell
 git clone https://github.com/hugo-HDSF/M1PEX_FINAL_TEST_nest.git
 ```
 
-2. Installez les dépendances:
+2. Installe dependencies:
 ```Shell
 npm ci
 ```
@@ -58,4 +58,4 @@ npm run test:e2e:postgres
 
 ### 🗺️ Swagger 
 
-> Le swagger est accessible à l'adresse suivante - [http://localhost:3000/api](http://localhost:3000/api)
+> The Swagger is available at the following address: [http://localhost:3000/api](http://localhost:3000/api)
